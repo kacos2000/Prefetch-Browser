@@ -6,6 +6,6 @@ Browse Windows Prefetch 10/11 *(for now)* properties
 
 
 To Do:
-- [ ] Add error checking
-- [ ]  Add support for earlier versions of Prefetch *(11/17/23)*  
-- [X] Windows 10/11 ok
+- [X] Add error checking
+- [X] Add support for earlier versions of Prefetch *(17/23/26)*  
+- [X] Windows 10/11 *(30 v.1&2)* ok
