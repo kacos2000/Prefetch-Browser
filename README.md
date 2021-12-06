@@ -6,4 +6,8 @@ Browse Windows Prefetch file properties
 
 
 
+![image](https://user-images.githubusercontent.com/11378310/144842922-b9711755-00b5-41ab-bcb9-c26a156988c2.png)
+
+
+
 
