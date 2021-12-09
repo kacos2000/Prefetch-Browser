@@ -4,7 +4,9 @@ Browse Windows Prefetch file properties
 
 ==> [Latest version](https://github.com/kacos2000/Prefetch-Browser/releases/latest) <==
 
-
+Dependencies: 
+- [.NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
+- [Powershell Version:  5.1](https://docs.microsoft.com/en-us/powershell/scripting/windows-powershell/install/windows-powershell-system-requirements?view=powershell-5.1)
 
 ![image](https://user-images.githubusercontent.com/11378310/144842922-b9711755-00b5-41ab-bcb9-c26a156988c2.png)
 
