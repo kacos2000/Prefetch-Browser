@@ -5,12 +5,12 @@
 $key           = "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Superfetch\PfAp"
 $KeyValues     = Get-Item -Path $key -ErrorAction Stop 
 $keyProperties = Get-ItemProperty -Path $key -ErrorAction Stop
-$UserTimeValue = $KeyValues.Property.Where{$_.startswith('UserTime') }
-$UserTime      = $keyProperties.$UserTimeValue
-$FetchValue    = $KeyValues.Property.Where{$_.startswith('ApFetch') }
-$Fetch         = $keyProperties.$FetchValue
+$UserTimeValue = @($KeyValues.Property.Where{$_.startswith('UserTime') })
+$UserTime      = foreach($u in $UserTimeValue){$keyProperties.$u} # $keyProperties.$UserTimeValue
+$FetchValue    = @($KeyValues.Property.Where{$_.startswith('ApFetch') })
+$Fetch         = foreach($f in $FetchValue){$keyProperties.$f} # $FetchValue|foreach{$_.property}
 $LaunchValue   = $KeyValues.Property.Where{$_.startswith('ApLaunch') }
-$Launch        = $keyProperties.$LaunchValue
+$Launch        = foreach($l in $LaunchValue){$keyProperties.$l} # $keyProperties.$LaunchValue
 # - ApFetch_%SIDHashed Compressed buffer. (not seen anything of interest here yet)
 # - ApLaunch_%SIDHashed Compressed buffer with a fixed size contains Win Universal Windows Platform (UWP) Apps. This buffer is updated periodically.
 # - UserTime_%ID Compressed buffer related to the context for a given user. This buffer is updated periodically.
